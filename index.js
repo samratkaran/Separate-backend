@@ -7,7 +7,7 @@ const nodemailer = require('nodemailer');
 const app = express();
 
 // Use the port from environment, or fallback to 5000 for local development
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 
 // CORS configuration (allowing all origins for testing)
 // app.use(cors({
@@ -87,12 +87,8 @@ app.post('/form', (req, res) => {
 });
 
 // Start the server (Hostinger will automatically handle the port)
-app.listen(process.env.PORT, async () => {
-    try {
-      console.log(`Listening at port ${process.env.PORT}`);
-    } catch (error) {
-      console.log(error);
-    }
-  });
+app.listen(port, () => {
+  console.log(`Listening at port ${port}`);
+});
 
   // new  comm add
