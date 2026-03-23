@@ -1,6 +1,7 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-require('dotenv').config();  // Loads variables from .env file (if needed)
+  // Loads variables from .env file (if needed)
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 
@@ -54,7 +55,7 @@ app.post('/form', (req, res) => {
 
 
     const mailOptions = {
-      from: 'karan@ebaseinfra.com', // Sender email
+      from: 'fromemail', // Sender email
       to: 'ebaseinfratech@gmail.com', // Recipient email
       subject: subject || 'property enquiry', // Use the subject from frontend
       html: `<table width='60%' style='border:1px solid black;'>
